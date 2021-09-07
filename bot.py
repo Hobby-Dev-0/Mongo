@@ -3,7 +3,9 @@ os.system("pip install pymongo && pip install dnspython && pip install motor")
 comfig = os.environ.get
 
 import motor, pymongo
-  
+
+import asyncio
+
 print("Welcome to pyMongo")
 
 def env(var, default=None):
