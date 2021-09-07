@@ -34,9 +34,9 @@ import motor.motor_asyncio
 if s:
     session = StringSession(str(s))
 else:
-    session = "hellbot"
+    session = "Noob"
 try:
-    Hell = TelegramClient(
+    noob = TelegramClient(
         session=session,
         api_id=APP_ID,
         api_hash=API_HASH,
