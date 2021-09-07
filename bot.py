@@ -3,6 +3,7 @@ comfig = os.environ.get
 from telethon import *
 import motor, pymongo
 from telethon.sessions import StringSession
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 import asyncio
 
 print ("Welcome to pyMongo")
