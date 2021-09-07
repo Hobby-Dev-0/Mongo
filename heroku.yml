@@ -1,0 +1,6 @@
+
+build:
+  docker:
+      mongo: Dockerfile
+run:
+   mongo: python3 -m bot
