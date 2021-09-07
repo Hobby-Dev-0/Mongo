@@ -22,13 +22,21 @@ if not mongo:
   print("Mongo DB Not Found I am Getting Exit")
   
 from os import system
+
 APP_ID = comfig("API_ID", None)
+
 API_HASH = comfig("API_HASH", None)
+
 import motor.motor_asyncio
+
 noob = TelegramClient(None, APP_ID, API_HASH)
+
+noob.start()
+
 database = motor.motor_asyncio.AsyncIOMotorClient(mongo)
 
 db = database ["Aman"]
+
 async def do_insert():
     result = await db.test_collection.insert_many(
         [{'i': i} for i in range(2000)])
