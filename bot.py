@@ -26,3 +26,6 @@ import motor.motor_asyncio
 database = motor.motor_asyncio.AsyncIOMotorClient(mongo)
 
 db = database ["Aman"]
+
+if __name__ == "__main__":
+  print(db)
