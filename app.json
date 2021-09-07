@@ -1,0 +1,15 @@
+{
+  "name": "Mongo",
+  "description": "MongoDB",
+  "logo": "https://telegra.ph/file/0a2ea63f9b5b5316aada9.png",
+  "keywords": ["mongo"],
+  "repository": "#TODO",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "stack": "container",
+  "env": {
+    "MONGOURI": {
+      "description": "Set your name which will be displayed on .alive messages, etc."
+    }
+  }
+}
