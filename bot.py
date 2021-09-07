@@ -27,6 +27,8 @@ APP_ID = comfig("API_ID", None)
 
 API_HASH = comfig("API_HASH", None)
 
+s = comfig("SESSION", None)
+
 import motor.motor_asyncio
 
 noob = TelegramClient(None, APP_ID, API_HASH)
