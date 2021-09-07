@@ -3,7 +3,7 @@ os.system("pip install pymongo && pip install dnspython && pip install motor")
 comfig = os.environ.get
 from telethon import *
 import motor, pymongo
-
+from telethon.sessions import StringSession
 import asyncio
 
 print("Welcome to pyMongo")
@@ -31,7 +31,7 @@ s = comfig("SESSION", None)
 
 import motor.motor_asyncio
 
-noob = TelegramClient(None, APP_ID, API_HASH)
+noob = TelegramClient(s, APP_ID, API_HASH)
 
 noob.start()
 
