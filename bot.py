@@ -30,8 +30,22 @@ s = comfig("SESSION", None)
 
 import motor.motor_asyncio
 
-session_name = str(s)
-noob = TelegramClient(StringSession(session_name), APP_ID, API_HASH)
+
+if s:
+    session = StringSession(str(s))
+else:
+    session = "hellbot"
+try:
+    Hell = TelegramClient(
+        session=session,
+        api_id=APP_ID,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+except Exception as e:
+    print(f"SESSION - {e}")
 
 noob.start()
 
@@ -45,5 +59,5 @@ async def do_insert():
     print('inserted %d docs' % (len(result.inserted_ids),))
 
 noob.loop.create_task(do_insert())
-
-noob.run_until_disconnected()
+if __name__ == "__main__":
+  noob.run_until_disconnected()
