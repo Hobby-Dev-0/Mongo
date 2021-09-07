@@ -2,15 +2,7 @@ import os
 
 comfig = os.environ.get
 
-
-try:
-  
-  import motor, pymongo, dnspython
-  
-except:
-  
-  os.system("pip install pymongo && pip install dnspython && pip install motor")
-  pass
+import motor, pymongo, dnspython
   
 print("Welcome to pyMongo")
 
@@ -21,7 +13,7 @@ def env(var, default=None):
   return k
 
 
-mongo = env("MONGO_URL")
+mongo = env("MONGO_URI")
 
 if not mongo:
   
