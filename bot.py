@@ -45,6 +45,6 @@ async def do_insert():
         [{'i': i} for i in range(2000)])
     print('inserted %d docs' % (len(result.inserted_ids),))
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(do_insert())
+noob.loop.create_task(do_insert())
+
 noob.run_until_disconnected()
