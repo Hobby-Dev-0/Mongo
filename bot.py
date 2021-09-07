@@ -32,7 +32,7 @@ s = comfig("SESSION", None)
 import motor.motor_asyncio
 
 session_name = str(s)
-bot = TelegramClient(StringSession(session_name), APP_ID, API_HASH)
+noob = TelegramClient(StringSession(session_name), APP_ID, API_HASH)
 
 noob.start()
 
