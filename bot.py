@@ -26,10 +26,10 @@ import motor.motor_asyncio
 database = motor.motor_asyncio.AsyncIOMotorClient(mongo)
 
 db = database ["Aman"]
-db.inventory.insertOne(
-   { "item" : "canvas",
-     "qty" : 100,
-     "tags" : ["cotton"],
-     "size" : { "h" : 28, "w" : 35.5, "uom" : "cm" }
-   }
-)
+async def do_insert():
+    result = await db.test_collection.insert_many(
+        [{'i': i} for i in range(2000)])
+    print('inserted %d docs' % (len(result.inserted_ids),))
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(do_insert())
