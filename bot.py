@@ -1,5 +1,4 @@
 import os
-os.system("pip install pymongo && pip install dnspython && pip install motor")
 comfig = os.environ.get
 from telethon import *
 import motor, pymongo
