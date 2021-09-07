@@ -8,8 +8,8 @@
   "success_url": "#TODO",
   "stack": "container",
   "env": {
-    "MONGOURI": {
-      "description": "Set your name which will be displayed on .alive messages, etc."
+    "MONGO_URI": {
+      "description": "Mongodb Url"
     }
   }
 }
