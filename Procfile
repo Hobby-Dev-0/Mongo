@@ -1,1 +1,1 @@
-mongo: python3 -m bot
+mongo: python3 -m udb
