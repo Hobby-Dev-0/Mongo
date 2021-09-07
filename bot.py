@@ -1,6 +1,6 @@
 import os
-os.system('pip install pymongo')
+comfig = os.environ.get
 import pymongo
 print("Welcome to pyMongo")
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient(comfig("MONGO_URI", None))
 print(client)
