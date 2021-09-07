@@ -6,7 +6,7 @@ import motor, pymongo
 from telethon.sessions import StringSession
 import asyncio
 
-print("Welcome to pyMongo")
+print ("Welcome to pyMongo")
 
 def env(var, default=None):
   
