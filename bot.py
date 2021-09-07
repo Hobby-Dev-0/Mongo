@@ -1,5 +1,5 @@
 import os
-
+os.system("pip install pymongo && pip install dnspython && pip install motor")
 comfig = os.environ.get
 
 import motor, pymongo, dnspython
